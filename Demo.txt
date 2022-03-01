@@ -1,1 +1,21 @@
-aaaa
+#define _CRT_SECURE_NO_WARNINGS 1
+
+#include <stdio.h>
+
+int main()
+{
+	const int a1 = 1;			//变量a1不可修改
+	int const a2 = 2;			//同上
+
+	int x1 = 1;
+	int x2 = 2;
+	const int* p1 = &x1;		//p1不可修改指向的数据的值,但指针可以指向别处
+	int* const p2 = &x2;		//p2可以修改指向的数据的值，但不可以指向别处
+	*p2 = 0;
+
+	int x3 = 3;
+	const int* const p3 = &x3;	//p3既不可修改数据的值，也不可指向别处
+
+
+	return 0;
+}
